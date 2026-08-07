@@ -1,13 +1,13 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/images/:path*", "destination": "https://battles-delta.vercel.app/images/:path*" },
-    { "source": "/voice/:path*", "destination": "https://battles-delta.vercel.app/voice/:path*" },
-    { "source": "/custom/:path*", "destination": "https://cddkwezsnsbijlbduaka.supabase.co/storage/v1/object/public/cards/:path*" }
+    { "source": "/images/:path*", "destination": "https://kvkodidoedcdwtuahgkf.supabase.co/storage/v1/object/public/game-assets/images/:path*" },
+    { "source": "/voice/:path*", "destination": "https://kvkodidoedcdwtuahgkf.supabase.co/storage/v1/object/public/game-assets/voice/:path*" },
+    { "source": "/custom/:path*", "destination": "https://kvkodidoedcdwtuahgkf.supabase.co/storage/v1/object/public/cards/:path*" }
   ],
   "headers": [
     { "source": "/images/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }, { "key": "Access-Control-Allow-Origin", "value": "*" }] },
     { "source": "/voice/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }, { "key": "Access-Control-Allow-Origin", "value": "*" }] },
-    { "source": "/custom/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }, { "key": "Access-Control-Allow-Origin", "value": "*" }] }
+    { "source": "/custom/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }, { "key": "Access-Control-Allow-Origin", "value": "*" }] }
   ]
 }
