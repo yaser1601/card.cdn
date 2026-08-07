@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/images/:file*", "destination": "https://battles-delta.vercel.app/images/:file*" },
+    { "source": "/voice/:file*", "destination": "https://battles-delta.vercel.app/voice/:file*" }
+  ],
+  "headers": [
+    {
+      "source": "/(images|voice)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
